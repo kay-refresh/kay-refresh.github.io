@@ -102,6 +102,7 @@ body {
 }
 footer.palette {
   padding: 24px;
+  text-transform: capitalize;
 }
 .archive-list a,
 .pigeonhole a {
@@ -199,4 +200,17 @@ article.article-type-post:nth-child(10) {
 }
 .article-more-link a:hover {
   background-color: #1abc9c;
+}
+.resume h2 {
+  font-size: 26px;
+}
+.resume h3 {
+  font-size: 22px;
+}
+.resume .row {
+  margin: 20px 0;
+}
+.resume .technology .progress {
+  height: 20px;
+  margin: 0;
 }

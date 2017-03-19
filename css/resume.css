@@ -1,0 +1,13 @@
+.resume h2 {
+  font-size: 26px;
+}
+.resume h3 {
+  font-size: 22px;
+}
+.resume .row {
+  margin: 20px 0;
+}
+.resume .technology .progress {
+  height: 20px;
+  margin: 0;
+}
