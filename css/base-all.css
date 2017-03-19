@@ -201,11 +201,18 @@ article.article-type-post:nth-child(10) {
 .article-more-link a:hover {
   background-color: #1abc9c;
 }
+.resume .panel-body,
+.resume h2 {
+  margin: 0;
+}
 .resume h2 {
   font-size: 26px;
 }
 .resume h3 {
   font-size: 22px;
+}
+.resume .panel-body {
+  padding: 0 15px;
 }
 .resume .row {
   margin: 20px 0;
