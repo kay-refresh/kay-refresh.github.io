@@ -3,17 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>剧情需要</title>
+  <title>less的loop(循环)写法详解 | 剧情需要</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="前端路上的笔记，以防忘记与作为留念。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="剧情需要">
-<meta property="og:url" content="http://slowlyLive.github.io/index.html">
+  <meta name="description" content="举例：有时候在写一个页面，然后当同一个列表每个 li 样式都要不同的时候，如果只有三、四条的时候还好，可以辛苦点手动自己写，但是当数量过多的时候，需要自己一个一个写出来，那就崩溃了，这个时候，less 的 loop 方法就出场了，官网的示例：
+12345678.loop(@counter) when (@counter &amp;gt; 0) &amp;#123;  .loop((@counter - 1));">
+<meta property="og:type" content="article">
+<meta property="og:title" content="less的loop(循环)写法详解">
+<meta property="og:url" content="http://slowlyLive.github.io/2017/03/20/less-loop.html">
 <meta property="og:site_name" content="剧情需要">
-<meta property="og:description" content="前端路上的笔记，以防忘记与作为留念。">
+<meta property="og:description" content="举例：有时候在写一个页面，然后当同一个列表每个 li 样式都要不同的时候，如果只有三、四条的时候还好，可以辛苦点手动自己写，但是当数量过多的时候，需要自己一个一个写出来，那就崩溃了，这个时候，less 的 loop 方法就出场了，官网的示例：
+12345678.loop(@counter) when (@counter &amp;gt; 0) &amp;#123;  .loop((@counter - 1));">
+<meta property="og:updated_time" content="2017-03-20T16:20:58.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="剧情需要">
-<meta name="twitter:description" content="前端路上的笔记，以防忘记与作为留念。">
+<meta name="twitter:title" content="less的loop(循环)写法详解">
+<meta name="twitter:description" content="举例：有时候在写一个页面，然后当同一个列表每个 li 样式都要不同的时候，如果只有三、四条的时候还好，可以辛苦点手动自己写，但是当数量过多的时候，需要自己一个一个写出来，那就崩溃了，这个时候，less 的 loop 方法就出场了，官网的示例：
+12345678.loop(@counter) when (@counter &amp;gt; 0) &amp;#123;  .loop((@counter - 1));">
   
   
     <link rel="icon" href="/favicon.png">
@@ -62,16 +66,14 @@
   <div class="container list-works">
     <div class="row article">
         <div class="col-lg-8 col-md-9 col-sm-12 col-xs-12">
-          
-  
-    <article  id="post-less-loop" class="panel panel-default loading article-type-post" itemscope itemprop="blogPost">
+          <article  id="post-less-loop" class="panel panel-default loading article-type-post" itemscope itemprop="blogPost">
     <div class="panel-heading">
         
         
             
   
-    <h2 class="panel-title" itemprop="name">
-      <a class="article-title" href="/2017/03/20/less-loop.html">less的loop(循环)写法详解</a>
+    <h2 class="panel-title article-title" itemprop="name">
+      less的loop(循环)写法详解
     </h2>
   
 
@@ -84,12 +86,20 @@
         
         <p>举例：有时候在写一个页面，然后当同一个列表每个 <code>li</code> 样式都要不同的时候，如果只有三、四条的时候还好，可以辛苦点手动自己写，但是当数量过多的时候，需要自己一个一个写出来，那就崩溃了，这个时候，<code>less</code> 的 <code>loop</code> 方法就出场了，官网的示例：</p>
 <figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.loop</span>(<span class="variable">@counter</span>) <span class="keyword">when</span> (<span class="variable">@counter</span> &gt; <span class="number">0</span>) &#123;</div><div class="line">  <span class="selector-class">.loop</span>((<span class="variable">@counter</span> - <span class="number">1</span>)); </div><div class="line">  <span class="attribute">width</span>: (<span class="number">10px</span> * <span class="variable">@counter</span>); </div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-tag">div</span> &#123;</div><div class="line">  <span class="selector-class">.loop</span>(<span class="number">5</span>); <span class="comment">// 调用循环</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-        
-          <p class="article-more-link">
-            <a href="/2017/03/20/less-loop.html#more">Read More</a>
-          </p>
-        
-        
+<a id="more"></a>
+<p>这个示例的一个参数： <code>@counter</code> 。</p>
+<p>本人观点， <code>@counter</code> 只是一个自定义的参数名，不用这个名字，用其他也是可以的，但是一定要有 <code>@</code> 符号。例如 <code>@a</code> 、 <code>@bb</code>。</p>
+<p>第一行的<br><figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.loop</span>(<span class="variable">@counter</span>) <span class="keyword">when</span> (<span class="variable">@counter</span> &gt; <span class="number">0</span>)</div></pre></td></tr></table></figure></p>
+<p>理解意思是，当 <code>@counter</code> 的值大于 <code>0</code> 时就进行工作，相当于 <code>for</code>。</p>
+<p>第二行的<br><figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.loop</span>((<span class="variable">@counter</span> - <span class="number">1</span>));</div></pre></td></tr></table></figure></p>
+<p>意思是：递归调用自身。</p>
+<p>第三行<br><figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="attribute">width</span>: (<span class="number">10px</span> * <span class="variable">@counter</span>);</div></pre></td></tr></table></figure></p>
+<p>意思是：每次调用时产生的样式代码</p>
+<p>最下面的<br><figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">div</span> &#123;</div><div class="line">  <span class="selector-class">.loop</span>(<span class="number">5</span>); <span class="comment">// 调用循环</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>意思是：调用循环，当循环达到参数值时停止运行;</p>
+<p>由于时间关系，未完待续…</p>
+
+
       
     </div>
     <div class="panel-footer">
@@ -100,52 +110,6 @@
         </div>
     </div>
 </article>
-  
-    <article  id="post-animate" class="panel panel-default loading article-type-post" itemscope itemprop="blogPost">
-    <div class="panel-heading">
-        
-        
-            
-  
-    <h2 class="panel-title" itemprop="name">
-      <a class="article-title" href="/2017/03/19/animate.html">animate.css动画库</a>
-    </h2>
-  
-
-        
-        <div class="panel-msg">
-            <span class="time fui-calendar-solid"><time datetime="2017-03-18T18:57:15.000Z" itemprop="datePublished">2017-03-19</time></span>
-        </div>
-    </div>
-    <div class="panel-body" itemprop="articleBody">
-        
-        <h2 id="什么是Animate-css"><a href="#什么是Animate-css" class="headerlink" title="什么是Animate.css"></a>什么是Animate.css</h2><p>Animate.css是一个有趣的，跨浏览器的css3动画库。很值得我们在项目中引用来实现各种简易动画。</p>
-<p>用法</p>
-<p>一、先下载源文件</p>
-<p>可直接通过<a href="https://github.com/daneden/animate.css">作者官网</a>进行下载文件。</p>
-<p>二、基本用法</p>
-<p>方法一、在文档的 <code>&lt;head&gt;</code> 中包含样式表</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;head&gt;</div><div class="line">  &lt;link rel="stylesheet" href="animate.min.css"&gt;</div><div class="line">&lt;/head&gt;</div></pre></td></tr></table></figure>
-<p>方法二、使用<a href="http://www.bootcdn.cn/animate.css/">BootCDN托管版本</a>选择对应的版本，复制链接直接使用：</p>
-        
-          <p class="article-more-link">
-            <a href="/2017/03/19/animate.html#more">Read More</a>
-          </p>
-        
-        
-      
-    </div>
-    <div class="panel-footer">
-        <div class="fui-tag">
-            
-  <a class="article-tag-link" href="/tags/css插件/">css插件</a>
-
-        </div>
-    </div>
-</article>
-  
-
-
         </div>
         <div class="col-lg-4 col-md-3 col-sm-12 col-xs-12" id="sidebar">
         
