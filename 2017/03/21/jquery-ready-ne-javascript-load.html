@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>jQuery的ready不等于JavaScript的load | 剧情需要</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="jQuery 定义的 ready 事件与 JavaScript 定义的 load 时间都表示页面 初始化行为，但是它们之间并非完全相同。
+HTML DOM 文档加载是按顺序执行的，这与浏览器的渲染方式有关系，一般浏览器渲染操作的顺序大致按如下几个步骤：
+
+解析 HTML 结构。
+加载外部脚本和样式表文件。
+解析并执行脚本代码。
+构造 HTML DOM 模型。
+加载图片等外部文件。
+页面加载完毕。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jQuery的ready不等于JavaScript的load">
+<meta property="og:url" content="http://slowlyLive.github.io/2017/03/21/jquery-ready-ne-javascript-load.html">
+<meta property="og:site_name" content="剧情需要">
+<meta property="og:description" content="jQuery 定义的 ready 事件与 JavaScript 定义的 load 时间都表示页面 初始化行为，但是它们之间并非完全相同。
+HTML DOM 文档加载是按顺序执行的，这与浏览器的渲染方式有关系，一般浏览器渲染操作的顺序大致按如下几个步骤：
+
+解析 HTML 结构。
+加载外部脚本和样式表文件。
+解析并执行脚本代码。
+构造 HTML DOM 模型。
+加载图片等外部文件。
+页面加载完毕。">
+<meta property="og:updated_time" content="2017-03-21T14:20:16.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="jQuery的ready不等于JavaScript的load">
+<meta name="twitter:description" content="jQuery 定义的 ready 事件与 JavaScript 定义的 load 时间都表示页面 初始化行为，但是它们之间并非完全相同。
+HTML DOM 文档加载是按顺序执行的，这与浏览器的渲染方式有关系，一般浏览器渲染操作的顺序大致按如下几个步骤：
+
+解析 HTML 结构。
+加载外部脚本和样式表文件。
+解析并执行脚本代码。
+构造 HTML DOM 模型。
+加载图片等外部文件。
+页面加载完毕。">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/flat-ui.css">
+  <link rel="stylesheet" href="/css/animate.css">
+  <link rel="stylesheet" href="/css/base-all.css">
+  
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-default navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="/" class="navbar-brand" id="logo">
+                      <h1>剧情需要</h1>
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">                        
+                          
+                            <li>
+                              <a class="main-nav-link" href="/">首页</a>
+                            </li>                                      
+                          
+                            <li>
+                              <a class="main-nav-link" href="/archives">归档</a>
+                            </li>                                      
+                          
+                    </ul>                   
+                </div>
+            </div>
+        </nav>
+  <div class="container list-works">
+    <div class="row article">
+        <div class="col-lg-8 col-md-9 col-sm-12 col-xs-12">
+          <article  id="post-jquery-ready-ne-javascript-load" class="panel panel-default loading article-type-post" itemscope itemprop="blogPost">
+    <div class="panel-heading">
+        
+        
+            
+  
+    <h2 class="panel-title article-title" itemprop="name">
+      jQuery的ready不等于JavaScript的load
+    </h2>
+  
+
+        
+        <div class="panel-msg">
+            <span class="time fui-calendar-solid"><time datetime="2017-03-21T13:48:22.000Z" itemprop="datePublished">2017-03-21</time></span>
+        </div>
+    </div>
+    <div class="panel-body" itemprop="articleBody">
+        
+        <p><code>jQuery</code> 定义的 <code>ready</code> 事件与 <code>JavaScript</code> 定义的 <code>load</code> 时间都表示页面 <code>初始化行为</code>，但是它们之间并非完全相同。</p>
+<p>HTML DOM 文档加载是按顺序执行的，这与浏览器的渲染方式有关系，一般浏览器渲染操作的顺序大致按如下几个步骤：</p>
+<ol>
+<li>解析 <code>HTML</code> 结构。</li>
+<li>加载外部脚本和样式表文件。</li>
+<li>解析并执行脚本代码。</li>
+<li>构造 <code>HTML DOM</code> 模型。</li>
+<li>加载图片等外部文件。</li>
+<li>页面加载完毕。</li>
+</ol>
+<a id="more"></a>
+<p><code>jQuery</code> 的 <code>ready</code> 与 <code>JavaScript</code> 的 <code>load</code> 二者的差异：</p>
+<ol>
+<li>执行时机不同。<br><code>load</code> 事件必须等到网页中所有内容全部加载完毕之后，才被执行。</li>
+</ol>
+<ul>
+<li><p>如果一个页面中包含了大数据的多媒体文件，则会出现网页文档已经呈现出来，但因为网页数据没有完全被加载完毕，导致 <code>load</code> 事件不能够即时被触发。</p>
+</li>
+<li><p>开发人员如果习惯把网页初始化配置的脚本都放在 <code>load</code> 事件处理函数中，会因为页面数据没有完全被加载出来，导致网页呈现和脚本初始化配置不能够保持同步，从而影响了页面的可用性。</p>
+</li>
+</ul>
+<p><code>jQuery</code> 的 <code>ready</code> 事件是在 <code>DOM</code> 结构绘制完毕之后就执行。</p>
+<ul>
+<li>它先于外部文件的加载就被执行了，这样就能够确保文档呈现和脚本初始化设置保持同步。</li>
+</ul>
+<p><code>ready</code> 事件先于 <code>load</code> 事件被激活，如果网页文档中没有加载外部文件，它们的响应事件基本上是相同的。</p>
+<ol>
+<li>用法不同</li>
+</ol>
+<p><code>JavaScript</code> 的 <code>load</code> 事件只能够被编写一次。仅能够响应最后一次执行的事件处理函数。例如下面的 <code>js</code> 代码，只有最后一个会被响应。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    alert(<span class="string">"页面初始化1"</span>);</div><div class="line">&#125;</div><div class="line"><span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    alert(<span class="string">"页面初始化2"</span>);</div><div class="line">&#125;</div><div class="line"><span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    alert(<span class="string">"页面初始化3"</span>);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>如果希望这3个事件处理函数中的代码都被执行，则应该把它们包含在一个处理函数中。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> f1 = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    alert(<span class="string">"页面初始化1"</span>);</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> f2 = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    alert(<span class="string">"页面初始化2"</span>);</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> f2 = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    alert(<span class="string">"页面初始化3"</span>);</div><div class="line">&#125;</div><div class="line"><span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    f1();</div><div class="line">    f2();</div><div class="line">    f3();</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>对于 <code>jQuery</code> 的 <code>ready</code> 事件类型来说，可以在同一个文档中多次定义。</p>
+<p>例如上面的示例，在 <code>jQuery</code> 的 <code>ready</code> 中可以这样来设计，但是首先需要引入 <code>jQuery</code> 文件：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    alert(<span class="string">"页面初始化1"</span>)；</div><div class="line">&#125;)</div><div class="line">$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    alert(<span class="string">"页面初始化2"</span>)；</div><div class="line">&#125;)</div><div class="line">$(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    alert(<span class="string">"页面初始化3"</span>)；</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    <div class="panel-footer">
+        <div class="fui-tag">
+            
+  <a class="article-tag-link" href="/tags/jQuery开发从入门到精通/">jQuery开发从入门到精通</a>
+
+        </div>
+    </div>
+</article>
+        </div>
+        <div class="col-lg-4 col-md-3 col-sm-12 col-xs-12" id="sidebar">
+        
+            
+    
+  
+    
+  <div class="panel panel-default widget-slowly">
+    <h4>标签</h4>
+    <div class="content tag-colud clearfix">
+      <a class="tag-link" href="/tags/css插件/">css插件</a><a class="tag-link" href="/tags/jQuery开发从入门到精通/">jQuery开发从入门到精通</a><a class="tag-link" href="/tags/less/">less</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="panel panel-default widget-slowly">
+    <h4>标签云</h4>
+    <div class="content tag-colud clearfix">
+      <a href="/tags/css插件/" style="font-size: 16px;">css插件</a> <a href="/tags/jQuery开发从入门到精通/" style="font-size: 16px;">jQuery开发从入门到精通</a> <a href="/tags/less/" style="font-size: 16px;">less</a>
+      
+    </div>
+  </div>
+
+  
+    
+  <div class="panel panel-default widget-slowly">
+    <h4>归档</h4>
+    <div class="content pigeonhole clearfix">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="panel panel-default widget-slowly">
+    <h4>最新文章</h4>
+    <div class="content pigeonhole clearfix">
+      <ul>
+        
+          <li>
+            <a href="/2017/03/21/jquery-ready-ne-javascript-load.html">jQuery的ready不等于JavaScript的load</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/20/less-loop.html">less的loop(循环)写法详解</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/19/animate.html">animate.css动画库</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+              
+
+        
+        </div>
+    </div>
+  </div>
+  <footer class="palette palette-wet-asphalt">
+    <p>&copy; 2017 slowly live in</p>
+    <p>Everything that exists and happens because the plot</p>  
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+  
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+
+</body>
+</html>

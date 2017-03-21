@@ -84,12 +84,29 @@ body {
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
+  position: relative;
   float: left;
+}
+.widget-slowly .tag-colud a:before,
+.widget-slowly .tag-colud a:after {
+  width: 1px;
+  height: 100%;
+  content: '';
+  position: absolute;
 }
 .widget-slowly .tag-colud a:hover {
   color: #fff;
-  background-color: #2ecc71;
-  border-color: #1abc9c;
+  color: #2ecc71;
+}
+.widget-slowly .tag-colud a:hover::before,
+.widget-slowly .tag-colud a:hover::after {
+  background-color: #1abc9c;
+}
+.widget-slowly .tag-colud a:hover:before {
+  left: 0;
+}
+.widget-slowly .tag-colud a:hover:after {
+  right: 0;
 }
 .widget-slowly .pigeonhole ul {
   padding-left: 20px;
