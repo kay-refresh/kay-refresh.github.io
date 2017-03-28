@@ -18,19 +18,12 @@
   
     <link rel="icon" href="/favicon.png">
   
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
   <link rel="stylesheet" href="/css/bootstrap.min.css">
   <link rel="stylesheet" href="/css/flat-ui.css">
-  <link rel="stylesheet" href="/css/animate.css">
   <link rel="stylesheet" href="/css/base-all.css">
-  
-
 </head>
 
 <body>
-
   <nav class="navbar navbar-default navbar-inverse">
             <div class="container-fluid">
                 <div class="navbar-header">
@@ -64,6 +57,119 @@
         <div class="col-lg-8 col-md-9 col-sm-12 col-xs-12">
           
   
+    <article  id="post-jquery-selector-nth-child" class="panel panel-default loading article-type-post" itemscope itemprop="blogPost">
+    <div class="panel-heading">
+        
+        
+            
+  
+    <h2 class="panel-title" itemprop="name">
+      <a class="article-title" href="/2017/03/28/jquery-selector-nth-child.html">jquery 匹配子元素的伪类选择器</a>
+    </h2>
+  
+
+        
+        <div class="panel-msg">
+            <span class="time fui-calendar-solid"><time datetime="2017-03-28T14:09:50.000Z" itemprop="datePublished">2017-03-28</time></span>
+        </div>
+    </div>
+    <div class="panel-body" itemprop="articleBody">
+        
+        <h3 id="2-6-匹配子元素的伪类选择器"><a href="#2-6-匹配子元素的伪类选择器" class="headerlink" title="2.6 匹配子元素的伪类选择器"></a>2.6 匹配子元素的伪类选择器</h3><p>作用：根据所匹配的元素检索其包含的子元素</p>
+<p>选择器：</p>
+<p><code>:nth-child</code>:匹配其父元素下的第N个子或奇偶元素。</p>
+<p><code>:first-child</code>：匹配第一个子元素。</p>
+<p><code>:last-child</code>：匹配最后一个子元素。</p>
+<p><code>:only-child</code>：如果某个元素是父元素中唯一的子元素，那将会被匹配：如果父元素中含有其他元素，那将不会被匹配。</p>
+<p><a href="http://codepen.io/kayze/pen/NpOGQJ" target="_blank" rel="external">匹配子元素的伪类选择器</a>|ec:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>人生若只如初见<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>何事秋风悲画扇<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>等闲变却故人心<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>却道故人心易变<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>骊山语罢清宵半<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>泪雨零铃终不怨<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>何如薄幸锦衣郎<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>比翼连枝当日愿<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line">        $(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</div><div class="line">            <span class="comment">//  匹配第一个P元素背景颜色为 "#77BEB0"</span></div><div class="line">            $(<span class="string">"p:first-child"</span>).css(<span class="string">"background"</span>, <span class="string">"#77BEB0"</span>);</div><div class="line">            <span class="comment">//  匹配最后一个P元素背景颜色为 "#77BEB0",文字颜色为 "#fff"</span></div><div class="line">            $(<span class="string">"p:last-child"</span>).css(&#123; <span class="string">"background"</span>: <span class="string">"#77BEB0"</span>, <span class="string">"color"</span>: <span class="string">"#fff"</span> &#125;);</div><div class="line">            <span class="comment">//  匹配第二个P元素背景颜色为 "#143E36",文字颜色为 "#fff"</span></div><div class="line">            $(<span class="string">"p:nth-child(2)"</span>).css(&#123; <span class="string">"background"</span>: <span class="string">"#143E36"</span>, <span class="string">"color"</span>: <span class="string">"#fff"</span> &#125;);</div><div class="line">            <span class="comment">//  匹配第三个P元素及后面每第二个P元素背景颜色为 "#273E3A",文字颜色为 "#fff"</span></div><div class="line">            $(<span class="string">"p:nth-child(2n+3)"</span>).css(&#123; <span class="string">"background"</span>: <span class="string">"#273E3A"</span>, <span class="string">"color"</span>: <span class="string">"#fff"</span> &#125;);</div><div class="line">        &#125;)</div><div class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <div class="panel-footer">
+        <div class="fui-tag">
+            
+  <a class="article-tag-link" href="/tags/jQuery/">jQuery</a>, <a class="article-tag-link" href="/tags/jQuery开发从入门到精通/">jQuery开发从入门到精通</a>
+
+        </div>
+    </div>
+</article>
+  
+    <article  id="post-jquery-selector-hidden-visible" class="panel panel-default loading article-type-post" itemscope itemprop="blogPost">
+    <div class="panel-heading">
+        
+        
+            
+  
+    <h2 class="panel-title" itemprop="name">
+      <a class="article-title" href="/2017/03/28/jquery-selector-hidden-visible.html">jquery 与元素显示状态相关的伪类选择器</a>
+    </h2>
+  
+
+        
+        <div class="panel-msg">
+            <span class="time fui-calendar-solid"><time datetime="2017-03-28T13:47:33.000Z" itemprop="datePublished">2017-03-28</time></span>
+        </div>
+    </div>
+    <div class="panel-body" itemprop="articleBody">
+        
+        <h3 id="2-5-与元素显示状态相关的伪类选择器"><a href="#2-5-与元素显示状态相关的伪类选择器" class="headerlink" title="2.5 与元素显示状态相关的伪类选择器"></a>2.5 与元素显示状态相关的伪类选择器</h3><p>作用：能够根据元素的可见或者隐藏进行快速过滤。</p>
+<p>选择器：</p>
+<p><code>:hidden</code>:匹配所有不可见元素，或者 <code>type</code> 为 <code>hidden</code> 的元素。</p>
+<p><code>:visible</code>：匹配所有的可见元素。</p>
+<p><a href="http://codepen.io/kayze/pen/NpOGQJ" target="_blank" rel="external">与元素显示状态相关的伪类选择器</a>|ec:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>人生若只如初见<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>何事秋风悲画扇<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>等闲变却故人心<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>却道故人心易变<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>骊山语罢清宵半<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>泪雨零铃终不怨<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>何如薄幸锦衣郎<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>比翼连枝当日愿<span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="javascript"></span></div><div class="line">        $(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123; </div><div class="line">            <span class="comment">//  设置所有可见元素背景颜色为 "#77BEB0"</span></div><div class="line">            $(<span class="string">"p:visible"</span>).css(<span class="string">"background"</span>,<span class="string">"#77BEB0"</span>);</div><div class="line">            <span class="comment">//  设置奇数位P元素背景颜色为 "#42C9AE"</span></div><div class="line">            $(<span class="string">"p:odd"</span>).css(<span class="string">"background"</span>,<span class="string">"#42C9AE"</span>);</div><div class="line">            <span class="comment">//  设置偶数位P元素隐藏</span></div><div class="line">            $(<span class="string">"p:even"</span>).hide();</div><div class="line">            <span class="comment">//  设置不可见元素显示并文字颜色为 "#FFF"，即偶数位P元素</span></div><div class="line">            $(<span class="string">"p:hidden"</span>).show().css(<span class="string">"color"</span>,<span class="string">"#FFF"</span>);</div><div class="line">        &#125;)</div><div class="line">    <span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <div class="panel-footer">
+        <div class="fui-tag">
+            
+  <a class="article-tag-link" href="/tags/jQuery/">jQuery</a>, <a class="article-tag-link" href="/tags/jQuery开发从入门到精通/">jQuery开发从入门到精通</a>
+
+        </div>
+    </div>
+</article>
+  
+    <article  id="post-jquery-class-selector" class="panel panel-default loading article-type-post" itemscope itemprop="blogPost">
+    <div class="panel-heading">
+        
+        
+            
+  
+    <h2 class="panel-title" itemprop="name">
+      <a class="article-title" href="/2017/03/23/jquery-class-selector.html">jquery 的选择器</a>
+    </h2>
+  
+
+        
+        <div class="panel-msg">
+            <span class="time fui-calendar-solid"><time datetime="2017-03-23T14:12:36.000Z" itemprop="datePublished">2017-03-23</time></span>
+        </div>
+    </div>
+    <div class="panel-body" itemprop="articleBody">
+        
+        <h3 id="2-4-1-contains（匹配包含文本选择器）"><a href="#2-4-1-contains（匹配包含文本选择器）" class="headerlink" title="2.4.1 contains（匹配包含文本选择器）"></a>2.4.1 contains（匹配包含文本选择器）</h3><p>作用：能够根据指定的文本在所能够匹配的元素集合中搜索包含特定关键字的元素。</p>
+<p>具体用法：</p>
+        
+          <p class="article-more-link">
+            <a href="/2017/03/23/jquery-class-selector.html#more">Read More</a>
+          </p>
+        
+        
+      
+    </div>
+    <div class="panel-footer">
+        <div class="fui-tag">
+            
+  <a class="article-tag-link" href="/tags/jQuery开发从入门到精通/">jQuery开发从入门到精通</a>
+
+        </div>
+    </div>
+</article>
+  
     <article  id="post-jquery-ready-ne-javascript-load" class="panel panel-default loading article-type-post" itemscope itemprop="blogPost">
     <div class="panel-heading">
         
@@ -84,14 +190,6 @@
         
         <p><code>jQuery</code> 定义的 <code>ready</code> 事件与 <code>JavaScript</code> 定义的 <code>load</code> 时间都表示页面 <code>初始化行为</code>，但是它们之间并非完全相同。</p>
 <p>HTML DOM 文档加载是按顺序执行的，这与浏览器的渲染方式有关系，一般浏览器渲染操作的顺序大致按如下几个步骤：</p>
-<ol>
-<li>解析 <code>HTML</code> 结构。</li>
-<li>加载外部脚本和样式表文件。</li>
-<li>解析并执行脚本代码。</li>
-<li>构造 <code>HTML DOM</code> 模型。</li>
-<li>加载图片等外部文件。</li>
-<li>页面加载完毕。</li>
-</ol>
         
           <p class="article-more-link">
             <a href="/2017/03/21/jquery-ready-ne-javascript-load.html#more">Read More</a>
@@ -128,7 +226,6 @@
     <div class="panel-body" itemprop="articleBody">
         
         <p>举例：有时候在写一个页面，然后当同一个列表每个 <code>li</code> 样式都要不同的时候，如果只有三、四条的时候还好，可以辛苦点手动自己写，但是当数量过多的时候，需要自己一个一个写出来，那就崩溃了，这个时候，<code>less</code> 的 <code>loop</code> 方法就出场了，官网的示例：</p>
-<figure class="highlight less"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.loop</span>(<span class="variable">@counter</span>) <span class="keyword">when</span> (<span class="variable">@counter</span> &gt; <span class="number">0</span>) &#123;</div><div class="line">  <span class="selector-class">.loop</span>((<span class="variable">@counter</span> - <span class="number">1</span>)); </div><div class="line">  <span class="attribute">width</span>: (<span class="number">10px</span> * <span class="variable">@counter</span>); </div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="selector-tag">div</span> &#123;</div><div class="line">  <span class="selector-class">.loop</span>(<span class="number">5</span>); <span class="comment">// 调用循环</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
         
           <p class="article-more-link">
             <a href="/2017/03/20/less-loop.html#more">Read More</a>
@@ -170,8 +267,6 @@
 <p>可直接通过<a href="https://github.com/daneden/animate.css">作者官网</a>进行下载文件。</p>
 <p>二、基本用法</p>
 <p>方法一、在文档的 <code>&lt;head&gt;</code> 中包含样式表</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;head&gt;</div><div class="line">  &lt;link rel="stylesheet" href="animate.min.css"&gt;</div><div class="line">&lt;/head&gt;</div></pre></td></tr></table></figure>
-<p>方法二、使用<a href="http://www.bootcdn.cn/animate.css/">BootCDN托管版本</a>选择对应的版本，复制链接直接使用：</p>
         
           <p class="article-more-link">
             <a href="/2017/03/19/animate.html#more">Read More</a>
@@ -201,7 +296,7 @@
   <div class="panel panel-default widget-slowly">
     <h4>标签</h4>
     <div class="content tag-colud clearfix">
-      <a class="tag-link" href="/tags/css插件/">css插件</a><a class="tag-link" href="/tags/jQuery开发从入门到精通/">jQuery开发从入门到精通</a><a class="tag-link" href="/tags/less/">less</a>
+      <a class="tag-link hvr-shutter-in-horizontal-link" href="/tags/css插件/">css插件</a><a class="tag-link hvr-shutter-in-horizontal-link" href="/tags/jQuery/">jQuery</a><a class="tag-link hvr-shutter-in-horizontal-link" href="/tags/jQuery开发从入门到精通/">jQuery开发从入门到精通</a><a class="tag-link hvr-shutter-in-horizontal-link" href="/tags/less/">less</a>
     </div>
   </div>
 
@@ -210,8 +305,7 @@
   <div class="panel panel-default widget-slowly">
     <h4>标签云</h4>
     <div class="content tag-colud clearfix">
-      <a href="/tags/css插件/" style="font-size: 16px;">css插件</a> <a href="/tags/jQuery开发从入门到精通/" style="font-size: 16px;">jQuery开发从入门到精通</a> <a href="/tags/less/" style="font-size: 16px;">less</a>
-      
+      <a href="/tags/css插件/" style="font-size: 16px;">css插件</a> <a href="/tags/jQuery/" style="font-size: 16px;">jQuery</a> <a href="/tags/jQuery开发从入门到精通/" style="font-size: 16px;">jQuery开发从入门到精通</a> <a href="/tags/less/" style="font-size: 16px;">less</a>
     </div>
   </div>
 
@@ -232,15 +326,23 @@
       <ul>
         
           <li>
+            <a href="/2017/03/28/jquery-selector-nth-child.html">jquery 匹配子元素的伪类选择器</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/28/jquery-selector-hidden-visible.html">jquery 与元素显示状态相关的伪类选择器</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/23/jquery-class-selector.html">jquery 的选择器</a>
+          </li>
+        
+          <li>
             <a href="/2017/03/21/jquery-ready-ne-javascript-load.html">jQuery的ready不等于JavaScript的load</a>
           </li>
         
           <li>
             <a href="/2017/03/20/less-loop.html">less的loop(循环)写法详解</a>
-          </li>
-        
-          <li>
-            <a href="/2017/03/19/animate.html">animate.css动画库</a>
           </li>
         
       </ul>
@@ -259,13 +361,6 @@
     <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
 </footer>
   
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
-
 
 <script src="/js/jquery.min.js"></script>
 <script src="/js/bootstrap.min.js"></script>

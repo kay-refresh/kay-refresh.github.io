@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>jquery 的选择器 | 剧情需要</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="2.4.1 contains（匹配包含文本选择器）作用：能够根据指定的文本在所能够匹配的元素集合中搜索包含特定关键字的元素。
+具体用法：">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jquery 的选择器">
+<meta property="og:url" content="http://slowlyLive.github.io/2017/03/23/jquery-class-selector.html">
+<meta property="og:site_name" content="剧情需要">
+<meta property="og:description" content="2.4.1 contains（匹配包含文本选择器）作用：能够根据指定的文本在所能够匹配的元素集合中搜索包含特定关键字的元素。
+具体用法：">
+<meta property="og:updated_time" content="2017-03-25T15:49:21.852Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="jquery 的选择器">
+<meta name="twitter:description" content="2.4.1 contains（匹配包含文本选择器）作用：能够根据指定的文本在所能够匹配的元素集合中搜索包含特定关键字的元素。
+具体用法：">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/flat-ui.css">
+  <link rel="stylesheet" href="/css/base-all.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-default navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="/" class="navbar-brand" id="logo">
+                      <h1>剧情需要</h1>
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">                        
+                          
+                            <li>
+                              <a class="main-nav-link" href="/">首页</a>
+                            </li>                                      
+                          
+                            <li>
+                              <a class="main-nav-link" href="/archives">归档</a>
+                            </li>                                      
+                          
+                    </ul>                   
+                </div>
+            </div>
+        </nav>
+  <div class="container list-works">
+    <div class="row article">
+        <div class="col-lg-8 col-md-9 col-sm-12 col-xs-12">
+          <article  id="post-jquery-class-selector" class="panel panel-default loading article-type-post" itemscope itemprop="blogPost">
+    <div class="panel-heading">
+        
+        
+            
+  
+    <h2 class="panel-title article-title" itemprop="name">
+      jquery 的选择器
+    </h2>
+  
+
+        
+        <div class="panel-msg">
+            <span class="time fui-calendar-solid"><time datetime="2017-03-23T14:12:36.000Z" itemprop="datePublished">2017-03-23</time></span>
+        </div>
+    </div>
+    <div class="panel-body" itemprop="articleBody">
+        
+        <h3 id="2-4-1-contains（匹配包含文本选择器）"><a href="#2-4-1-contains（匹配包含文本选择器）" class="headerlink" title="2.4.1 contains（匹配包含文本选择器）"></a>2.4.1 contains（匹配包含文本选择器）</h3><p>作用：能够根据指定的文本在所能够匹配的元素集合中搜索包含特定关键字的元素。</p>
+<p>具体用法：</p>
+<a id="more"></a>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">jQuery(&quot;selector:contains(text)&quot;);</div></pre></td></tr></table></figure>
+<p>参数：<code>selector</code>、<code>contains</code>、<code>text</code> 为字符串。</p>
+<p><code>selector</code>：表示任意形式的选择器。<br><code>:</code>：伪类选择器的标识符。<br><code>contains()</code>：文本匹配函数。<br><code>text</code>：表示一个用以查找的字符串。</p>
+<p><a href="http://codepen.io/kayze/pen/EWLrqN?editors=1111" target="_blank" rel="external">contains（匹配包含文本选择器）</a>|ec：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line">    $(function()&#123;</div><div class="line">        $("p:contains('伪类选择器')").css("color","#f00");</div><div class="line">    &#125;)</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"contains"</span> &gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span></div><div class="line">        jquery 与内容相关的伪类选择器</div><div class="line">    <span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span></div><div class="line">        jquery 与内容相关的选择器</div><div class="line">    <span class="tag">&lt;/<span class="name">p</span>&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>在上面这个示例代码中，会被 <code>jQuery</code> 所响应的是第一个 <code>p</code> 标签的文字。</p>
+<blockquote>
+<p>注意</p>
+</blockquote>
+<p>在 <code>contains</code> 过滤函数中必须使用 <code>单引号</code> 包含文本关键字，否则 <code>jQuery</code> 将无法进行识别和解析。</p>
+<h3 id="2-4-2-has-匹配包含元素选择器"><a href="#2-4-2-has-匹配包含元素选择器" class="headerlink" title="2.4.2 has(匹配包含元素选择器)"></a>2.4.2 has(匹配包含元素选择器)</h3><p>作用： 主要搜索匹配元素所包含的元素进行过滤。</p>
+<p>具体用法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">jQuery(&quot;selector1:has(selector2)&quot;);</div></pre></td></tr></table></figure>
+<p>参数：<code>selector1</code>、<code>has</code>、<code>selector2</code> 为字符串。</p>
+<p><code>selector1</code>：表示任意形式的选择器。<br><code>:</code>：伪类选择器的标识符。<br><code>selector2</code>：表示任意形式的选择器。<br><code>has</code>：表示包含元素匹配函数。</p>
+<p><a href="http://codepen.io/kayze/pen/EWLrqN?editors=1111" target="_blank" rel="external">contains（匹配包含文本选择器）</a>|ec：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line">    $(function()&#123;</div><div class="line">        $(function () &#123;</div><div class="line">            $("div:has(p)").css("background","#f00");</div><div class="line">        &#125;)</div><div class="line">    &#125;)</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">p</span>&gt;</span>Everything That Exists And Happens Because The Plot<span class="tag">&lt;/<span class="name">p</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"> </div><div class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span>Everything That Exists And Happens Because The Plot<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div></pre></td></tr></table></figure></p>
+
+
+      
+    </div>
+    <div class="panel-footer">
+        <div class="fui-tag">
+            
+  <a class="article-tag-link" href="/tags/jQuery开发从入门到精通/">jQuery开发从入门到精通</a>
+
+        </div>
+    </div>
+</article>
+        </div>
+        <div class="col-lg-4 col-md-3 col-sm-12 col-xs-12" id="sidebar">
+        
+            
+    
+  
+    
+  <div class="panel panel-default widget-slowly">
+    <h4>标签</h4>
+    <div class="content tag-colud clearfix">
+      <a class="tag-link hvr-shutter-in-horizontal-link" href="/tags/css插件/">css插件</a><a class="tag-link hvr-shutter-in-horizontal-link" href="/tags/jQuery/">jQuery</a><a class="tag-link hvr-shutter-in-horizontal-link" href="/tags/jQuery开发从入门到精通/">jQuery开发从入门到精通</a><a class="tag-link hvr-shutter-in-horizontal-link" href="/tags/less/">less</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="panel panel-default widget-slowly">
+    <h4>标签云</h4>
+    <div class="content tag-colud clearfix">
+      <a href="/tags/css插件/" style="font-size: 16px;">css插件</a> <a href="/tags/jQuery/" style="font-size: 16px;">jQuery</a> <a href="/tags/jQuery开发从入门到精通/" style="font-size: 16px;">jQuery开发从入门到精通</a> <a href="/tags/less/" style="font-size: 16px;">less</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="panel panel-default widget-slowly">
+    <h4>归档</h4>
+    <div class="content pigeonhole clearfix">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="panel panel-default widget-slowly">
+    <h4>最新文章</h4>
+    <div class="content pigeonhole clearfix">
+      <ul>
+        
+          <li>
+            <a href="/2017/03/28/jquery-selector-nth-child.html">jquery 匹配子元素的伪类选择器</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/28/jquery-selector-hidden-visible.html">jquery 与元素显示状态相关的伪类选择器</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/23/jquery-class-selector.html">jquery 的选择器</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/21/jquery-ready-ne-javascript-load.html">jQuery的ready不等于JavaScript的load</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/20/less-loop.html">less的loop(循环)写法详解</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+              
+
+        
+        </div>
+    </div>
+  </div>
+  <footer class="palette palette-wet-asphalt">
+    <p>&copy; 2017 slowly live in</p>
+    <p>Everything that exists and happens because the plot</p>  
+    <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
+</footer>
+  
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+
+</body>
+</html>

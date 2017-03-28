@@ -6,56 +6,28 @@
   <title>jQuery的ready不等于JavaScript的load | 剧情需要</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="jQuery 定义的 ready 事件与 JavaScript 定义的 load 时间都表示页面 初始化行为，但是它们之间并非完全相同。
-HTML DOM 文档加载是按顺序执行的，这与浏览器的渲染方式有关系，一般浏览器渲染操作的顺序大致按如下几个步骤：
-
-解析 HTML 结构。
-加载外部脚本和样式表文件。
-解析并执行脚本代码。
-构造 HTML DOM 模型。
-加载图片等外部文件。
-页面加载完毕。">
+HTML DOM 文档加载是按顺序执行的，这与浏览器的渲染方式有关系，一般浏览器渲染操作的顺序大致按如下几个步骤：">
 <meta property="og:type" content="article">
 <meta property="og:title" content="jQuery的ready不等于JavaScript的load">
 <meta property="og:url" content="http://slowlyLive.github.io/2017/03/21/jquery-ready-ne-javascript-load.html">
 <meta property="og:site_name" content="剧情需要">
 <meta property="og:description" content="jQuery 定义的 ready 事件与 JavaScript 定义的 load 时间都表示页面 初始化行为，但是它们之间并非完全相同。
-HTML DOM 文档加载是按顺序执行的，这与浏览器的渲染方式有关系，一般浏览器渲染操作的顺序大致按如下几个步骤：
-
-解析 HTML 结构。
-加载外部脚本和样式表文件。
-解析并执行脚本代码。
-构造 HTML DOM 模型。
-加载图片等外部文件。
-页面加载完毕。">
-<meta property="og:updated_time" content="2017-03-21T14:20:16.000Z">
+HTML DOM 文档加载是按顺序执行的，这与浏览器的渲染方式有关系，一般浏览器渲染操作的顺序大致按如下几个步骤：">
+<meta property="og:updated_time" content="2017-03-25T15:49:43.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="jQuery的ready不等于JavaScript的load">
 <meta name="twitter:description" content="jQuery 定义的 ready 事件与 JavaScript 定义的 load 时间都表示页面 初始化行为，但是它们之间并非完全相同。
-HTML DOM 文档加载是按顺序执行的，这与浏览器的渲染方式有关系，一般浏览器渲染操作的顺序大致按如下几个步骤：
-
-解析 HTML 结构。
-加载外部脚本和样式表文件。
-解析并执行脚本代码。
-构造 HTML DOM 模型。
-加载图片等外部文件。
-页面加载完毕。">
+HTML DOM 文档加载是按顺序执行的，这与浏览器的渲染方式有关系，一般浏览器渲染操作的顺序大致按如下几个步骤：">
   
   
     <link rel="icon" href="/favicon.png">
   
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
   <link rel="stylesheet" href="/css/bootstrap.min.css">
   <link rel="stylesheet" href="/css/flat-ui.css">
-  <link rel="stylesheet" href="/css/animate.css">
   <link rel="stylesheet" href="/css/base-all.css">
-  
-
 </head>
 
 <body>
-
   <nav class="navbar navbar-default navbar-inverse">
             <div class="container-fluid">
                 <div class="navbar-header">
@@ -107,6 +79,7 @@ HTML DOM 文档加载是按顺序执行的，这与浏览器的渲染方式有�
         
         <p><code>jQuery</code> 定义的 <code>ready</code> 事件与 <code>JavaScript</code> 定义的 <code>load</code> 时间都表示页面 <code>初始化行为</code>，但是它们之间并非完全相同。</p>
 <p>HTML DOM 文档加载是按顺序执行的，这与浏览器的渲染方式有关系，一般浏览器渲染操作的顺序大致按如下几个步骤：</p>
+<a id="more"></a>
 <ol>
 <li>解析 <code>HTML</code> 结构。</li>
 <li>加载外部脚本和样式表文件。</li>
@@ -115,7 +88,6 @@ HTML DOM 文档加载是按顺序执行的，这与浏览器的渲染方式有�
 <li>加载图片等外部文件。</li>
 <li>页面加载完毕。</li>
 </ol>
-<a id="more"></a>
 <p><code>jQuery</code> 的 <code>ready</code> 与 <code>JavaScript</code> 的 <code>load</code> 二者的差异：</p>
 <ol>
 <li>执行时机不同。<br><code>load</code> 事件必须等到网页中所有内容全部加载完毕之后，才被执行。</li>
@@ -162,7 +134,7 @@ HTML DOM 文档加载是按顺序执行的，这与浏览器的渲染方式有�
   <div class="panel panel-default widget-slowly">
     <h4>标签</h4>
     <div class="content tag-colud clearfix">
-      <a class="tag-link" href="/tags/css插件/">css插件</a><a class="tag-link" href="/tags/jQuery开发从入门到精通/">jQuery开发从入门到精通</a><a class="tag-link" href="/tags/less/">less</a>
+      <a class="tag-link hvr-shutter-in-horizontal-link" href="/tags/css插件/">css插件</a><a class="tag-link hvr-shutter-in-horizontal-link" href="/tags/jQuery/">jQuery</a><a class="tag-link hvr-shutter-in-horizontal-link" href="/tags/jQuery开发从入门到精通/">jQuery开发从入门到精通</a><a class="tag-link hvr-shutter-in-horizontal-link" href="/tags/less/">less</a>
     </div>
   </div>
 
@@ -171,8 +143,7 @@ HTML DOM 文档加载是按顺序执行的，这与浏览器的渲染方式有�
   <div class="panel panel-default widget-slowly">
     <h4>标签云</h4>
     <div class="content tag-colud clearfix">
-      <a href="/tags/css插件/" style="font-size: 16px;">css插件</a> <a href="/tags/jQuery开发从入门到精通/" style="font-size: 16px;">jQuery开发从入门到精通</a> <a href="/tags/less/" style="font-size: 16px;">less</a>
-      
+      <a href="/tags/css插件/" style="font-size: 16px;">css插件</a> <a href="/tags/jQuery/" style="font-size: 16px;">jQuery</a> <a href="/tags/jQuery开发从入门到精通/" style="font-size: 16px;">jQuery开发从入门到精通</a> <a href="/tags/less/" style="font-size: 16px;">less</a>
     </div>
   </div>
 
@@ -193,15 +164,23 @@ HTML DOM 文档加载是按顺序执行的，这与浏览器的渲染方式有�
       <ul>
         
           <li>
+            <a href="/2017/03/28/jquery-selector-nth-child.html">jquery 匹配子元素的伪类选择器</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/28/jquery-selector-hidden-visible.html">jquery 与元素显示状态相关的伪类选择器</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/23/jquery-class-selector.html">jquery 的选择器</a>
+          </li>
+        
+          <li>
             <a href="/2017/03/21/jquery-ready-ne-javascript-load.html">jQuery的ready不等于JavaScript的load</a>
           </li>
         
           <li>
             <a href="/2017/03/20/less-loop.html">less的loop(循环)写法详解</a>
-          </li>
-        
-          <li>
-            <a href="/2017/03/19/animate.html">animate.css动画库</a>
           </li>
         
       </ul>
@@ -220,13 +199,6 @@ HTML DOM 文档加载是按顺序执行的，这与浏览器的渲染方式有�
     <p>Powered by <a href="http://hexo.io/" target="_blank">Hexo</a></p>
 </footer>
   
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
-
 
 <script src="/js/jquery.min.js"></script>
 <script src="/js/bootstrap.min.js"></script>
