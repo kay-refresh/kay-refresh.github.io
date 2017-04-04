@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <title>请登陆</title>
+    <link rel="stylesheet" href="./dest/normalize.css">
+    <link rel="stylesheet" href="./dest/base-all.css">
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/respond.js"></script>
+
+</head>
+<body>
+<div class="container pos-rel height100">
+    <div class="logo dis-jcc-aic">
+        <img src="./images/logo.jpeg" alt="">
+    </div>
+    <form method="get" action="./recommend.html" name="loginFrom" onsubmit="">
+        <div class="dis-jcc-aic">
+            <div class="id-pwd pos-rel">
+                <div class="hint">
+                    账号是：abc,密码是：abc
+                </div>
+                <div class="id pos-rel">
+                    <input class="" name="id" type="text" placeholder="请输入账号">
+                </div>
+                <div class="pwd pos-rel">
+                    <input class="" name="pwd" type="password" placeholder="请输入密码">
+                </div>
+            </div>
+        </div>
+        <div class="dis-jcc-aic">
+            <input class="login" type="submit" value="登 陆">
+        </div>
+    </form>
+
+    <div class="dis-jcc-aife">
+        <div class="container forget-register height56 dis-flex">
+            <div class="forget fsize28">
+                忘记密码
+            </div>
+            <div class="register fsize28">
+                注册
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(function(){
+        $(".id-pwd input").hover(function () {
+            $(this).parent(".pos-rel").toggleClass("id-pwd-tran");
+            $(this).parent().parent(".id-pwd").toggleClass("on");
+        });
+    })
+</script>
+<script>
+    $("form").submit(function(e){
+        if(document.forms[0].id.value=="abc"&&document.forms[0].pwd.value=="abc"){
+//            alert("正确！")
+        }else{
+            alert("用户名或密码不正确！");
+            return false;
+        }
+    });
+</script>
+</body>
+</html>
