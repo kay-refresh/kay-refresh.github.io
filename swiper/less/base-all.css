@@ -1,0 +1,305 @@
+html,
+body {
+  height: 100%;
+}
+body {
+  min-width: 320px;
+  max-width: 640px;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+.swiper-slide > div:not(.page1) {
+  height: 100%;
+  padding: 0 .2rem;
+}
+.swiper-slide > div:not(.page1) .title {
+  margin: .6rem 0 .4rem 0;
+}
+.page1,
+.page2,
+.page3,
+.page4,
+.page5,
+.page6 {
+  width: 100%;
+  font-size: .4rem;
+}
+.page1 .title,
+.page2 .title,
+.page3 .title,
+.page4 .title,
+.page5 .title,
+.page6 .title {
+  font-size: .6rem;
+}
+.page1 {
+  font-size: 0.4rem;
+  position: relative;
+}
+.page1 .title {
+  height: 1rem;
+  line-height: 1rem;
+}
+.page1 .title:before,
+.page1 .title:after {
+  width: 80%;
+  height: 2px;
+  background-color: #000;
+  content: '';
+  font-size: 0.2rem;
+  display: block;
+  position: absolute;
+  transition: 1s;
+}
+.page1 .title:before {
+  right: -100%;
+}
+.page1 .title:after {
+  left: -100%;
+}
+.page1 .name {
+  margin-top: 0;
+  transition: 1s;
+  transition-delay: 1s;
+  opacity: 0;
+}
+.page1 .swing-icon {
+  animation: swing 1s linear;
+  -webkit-animation: swing 1s linear;
+}
+.page2 .title,
+.page3 .title {
+  font-size: .6rem;
+}
+.page2 .main,
+.page3 .main {
+  margin-top: .6rem;
+  overflow: hidden;
+}
+.page2 .left,
+.page3 .left {
+  width: 40%;
+  float: left;
+}
+.page2 .right,
+.page3 .right {
+  width: 58%;
+  float: right;
+}
+.page2 .time,
+.page3 .time {
+  font-size: .3rem;
+}
+.page2 .company-name,
+.page3 .company-name {
+  font-size: .3rem;
+}
+.page2 .responsible,
+.page3 .responsible {
+  font-size: .3rem;
+  text-align: left;
+}
+.page2 .responsible p,
+.page3 .responsible p {
+  margin: .2rem 0;
+}
+.page4 .skill {
+  overflow: hidden;
+}
+.page4 .skill > div {
+  overflow: hidden;
+  margin: .2rem 0;
+}
+.page4 .skill h3 {
+  float: left;
+  margin: 0;
+  font-size: .4rem;
+  color: #656d6e;
+  font-weight: 100;
+}
+.page4 .skill .skill-bar {
+  width: 3rem;
+  height: 0.4rem;
+  line-height: .4rem;
+  border: 1px solid #cae9ef;
+  float: right;
+}
+.page4 .skill .skill-bar:before {
+  width: 0;
+  height: .4rem;
+  background-color: rgba(96, 106, 160, 0.83);
+  content: '';
+  display: block;
+  transition: 1s;
+}
+.skill div:nth-child(1) .skill-bar:before {
+  transition: 1s;
+  transition-delay: 0.1s;
+}
+.skill div:nth-child(2) .skill-bar:before {
+  transition: 1s;
+  transition-delay: 0.2s;
+}
+.skill div:nth-child(3) .skill-bar:before {
+  transition: 1s;
+  transition-delay: 0.3s;
+}
+.skill div:nth-child(4) .skill-bar:before {
+  transition: 1s;
+  transition-delay: 0.4s;
+}
+.skill div:nth-child(5) .skill-bar:before {
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+.skill div:nth-child(6) .skill-bar:before {
+  transition: 1s;
+  transition-delay: 0.6s;
+}
+.skill div:nth-child(7) .skill-bar:before {
+  transition: 1s;
+  transition-delay: 0.7s;
+}
+.skill div:nth-child(8) .skill-bar:before {
+  transition: 1s;
+  transition-delay: 0.8s;
+}
+.skill div:nth-child(9) .skill-bar:before {
+  transition: 1s;
+  transition-delay: 0.9s;
+}
+.skill div:nth-child(10) .skill-bar:before {
+  transition: 1s;
+  transition-delay: 1s;
+}
+.skill div:nth-child(11) .skill-bar:before {
+  transition: 1s;
+  transition-delay: 1.1s;
+}
+.skill div:nth-child(12) .skill-bar:before {
+  transition: 1s;
+  transition-delay: 1.2s;
+}
+.page5 .content {
+  font-size: .3rem;
+  line-height: .6rem;
+  text-align: left;
+  text-indent: .6rem;
+}
+.page5 .content p {
+  margin: 0;
+  margin-bottom: .2rem;
+}
+.page6 .content {
+  text-align: left;
+}
+.page6 .content div {
+  margin: 0;
+  margin-bottom: .2rem;
+}
+.page6 .content img {
+  width: 2rem;
+  height: 2.6rem;
+  margin: 0 .5rem;
+}
+.page6 .content .ewm {
+  margin: .4rem 0;
+  justify-content: center;
+  display: flex;
+}
+.swiper-slide-active .page1 .title:before {
+  right: 10%;
+}
+.swiper-slide-active .page1 .title:after {
+  left: 10%;
+}
+.swiper-slide-active .page1 .name {
+  margin-top: 1.2rem;
+  opacity: 1;
+}
+.swiper-slide-active .page4 .html5:before {
+  width: 2rem;
+}
+.swiper-slide-active .page4 .css3:before {
+  width: 2rem;
+}
+.swiper-slide-active .page4 .js:before {
+  width: 1.6rem;
+}
+.swiper-slide-active .page4 .jquery:before {
+  width: 2rem;
+}
+.swiper-slide-active .page4 .ani:before {
+  width: 1.8rem;
+}
+.swiper-slide-active .page4 .ajax:before {
+  width: 1.5rem;
+}
+.swiper-slide-active .page4 .less:before {
+  width: 2rem;
+}
+.swiper-slide-active .page4 .seo:before {
+  width: 2rem;
+}
+.swiper-slide-active .page4 .vueJs:before {
+  width: 1rem;
+}
+.swiper-slide-active .page4 .Hexo:before {
+  width: 2rem;
+}
+.swiper-slide-active .page4 .git:before {
+  width: 1.5rem;
+}
+.swiper-slide-active .page4 .photoshop:before {
+  width: 1.8rem;
+}
+@-webkit-keyframes swing {
+  20% {
+    -webkit-transform: rotate3d(0, 0, 1, 15deg);
+    transform: rotate3d(0, 0, 1, 15deg);
+  }
+  40% {
+    -webkit-transform: rotate3d(0, 0, 1, -10deg);
+    transform: rotate3d(0, 0, 1, -10deg);
+  }
+  60% {
+    -webkit-transform: rotate3d(0, 0, 1, 5deg);
+    transform: rotate3d(0, 0, 1, 5deg);
+  }
+  80% {
+    -webkit-transform: rotate3d(0, 0, 1, -5deg);
+    transform: rotate3d(0, 0, 1, -5deg);
+  }
+  to {
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+}
+@keyframes swing {
+  20% {
+    -webkit-transform: rotate3d(0, 0, 1, 15deg);
+    transform: rotate3d(0, 0, 1, 15deg);
+  }
+  40% {
+    -webkit-transform: rotate3d(0, 0, 1, -10deg);
+    transform: rotate3d(0, 0, 1, -10deg);
+  }
+  60% {
+    -webkit-transform: rotate3d(0, 0, 1, 5deg);
+    transform: rotate3d(0, 0, 1, 5deg);
+  }
+  80% {
+    -webkit-transform: rotate3d(0, 0, 1, -5deg);
+    transform: rotate3d(0, 0, 1, -5deg);
+  }
+  to {
+    -webkit-transform: rotate3d(0, 0, 1, 0deg);
+    transform: rotate3d(0, 0, 1, 0deg);
+  }
+}
+.swing {
+  -webkit-transform-origin: top center;
+  transform-origin: top center;
+  -webkit-animation-name: swing;
+  animation-name: swing;
+}
