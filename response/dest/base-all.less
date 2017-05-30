@@ -1,0 +1,281 @@
+body {
+    background-color: #f4f4f4;
+}
+
+.banner {
+    width: 100%;
+}
+
+.balance,
+.combo {
+    background-color: #fff;
+    margin-top: 17/16rem;
+    overflow: hidden;
+    &>.title {
+        border-bottom: 1px solid #efefef;
+    }
+    &>.title>.main {
+        width: 170/16rem;
+        @height: 80/16rem;
+        height: @height;
+        line-height: @height;
+        font-size: 30/16rem;
+        text-indent: 42/16rem;
+        background: url("../images/balance.jpg") no-repeat left center;
+        background-size: 29/16rem 35/16rem;
+        margin: 0 auto;
+    }
+    .main {
+        overflow: hidden;
+    }
+}
+
+// 余额
+.balance {
+    padding-bottom: 30/16rem;
+    .con {
+        width: 50%;
+        position: relative;
+        float: left;
+        .data,
+        .title,
+        .link {
+            text-align: center;
+        }
+        .data {
+            font-size: 38/16rem;
+            color: #1baa5c;
+            margin-top: 35/16rem;
+        }
+        .title {
+            font-size: 26/16rem;
+            color: #999999;
+            margin: 30/16rem 0;
+        }
+        .link {
+            @height: 67/16rem;
+            height: @height;
+            line-height: @height;
+            color: #1cc86a;
+            font-size: 28/16rem;
+            border: 1px solid #1cc86a;
+            border-radius: 50px; 
+            margin: 0 (375-252)/2/16rem;
+            display: block;
+        }
+        .free{
+            width: 138/16rem;
+            height: 33/16rem;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    }
+}
+
+.combo>.title>.main {
+    background: url("../images/combo.jpg") no-repeat left center;
+    background-size: 29/16rem 35/16rem;
+}
+
+// 套餐
+.combo {
+    .con {
+        width: 50%;
+        border-bottom: 1px solid #eeeeee;
+        float: left;
+        &:nth-child(even) {
+            .link {
+                border-left: 1px solid #eeeeee;
+            }
+        }
+    }
+    .link {
+        height: 84/16rem;
+        background: url("../images/combo-link.jpg") no-repeat left 21/16rem center;
+        background-size: 84/16rem 84/16rem;
+        padding: 36/16rem 0;
+        display: block;
+        position: relative;
+        .num,
+        .describe {
+            margin-left: 127/16rem;
+        }
+        .num {
+            color: #000;
+            font-size: 38/16rem;
+        }
+        .describe {
+            color: #999;
+            font-size: 22/16rem;
+            margin-top: 16/16rem;
+        }
+        .arrow {
+            width: 17/16rem;
+            height: 29/16rem;
+            position: absolute;
+            right: 26/16rem;
+            top: 64/16rem;
+        }
+    }
+}
+
+// 底部
+footer {
+    .footer {
+        width: 320/16rem;
+        @height: 85/16rem;
+        height: @height;
+        line-height: @height;
+        font-size: 20/16rem;
+        text-indent: 71/16rem;
+        margin: 0 auto;
+        background: url("../images/footer-icon.jpg") no-repeat left center;
+    }
+}
+
+// 付款
+.sum-payment {
+    background-color: #fff;
+    margin-top: 20/16rem;
+    .con {
+        height: 150/16rem;
+        background: url("../images/sum.jpg") no-repeat left 19/16rem center;
+        background-size: 80/16rem 78/16rem;
+        border-bottom: 1px solid #eee;
+        overflow: hidden;
+        .num,
+        .pay {
+            text-indent: 129/16rem;
+        }
+        .num {
+            font-size: 34/16rem;
+            margin: 30/16rem 0 16/16rem;
+        }
+        .pay {
+            font-size: 28/16rem;
+            color: #999;
+        }
+    }
+    .con-a {
+        @height: 105/16rem;
+        height: @height;
+        overflow: hidden;
+        margin: 0 19/16rem;
+        .txt {
+            line-height: @height;
+            font-size: 28/16rem;
+            color: #666;
+            float: left;
+        }
+        .num {
+            float: right;
+            .num-a {
+                @height: 54/16rem;
+                height: @height;
+                line-height: @height;
+                color: #ed2027;
+                font-size: 28/16rem;
+                margin-top: 13/16rem;
+            }
+            .num-b {
+                font-size: 18/16rem;
+            }
+        }
+    }
+}
+
+.type-payment {
+    background-color: #fff;
+    margin-top: 20/16rem;
+    .title {
+        @height: 80/16rem;
+        height: @height;
+        line-height: @height;
+        font-size: 26/16rem;
+        text-align: center;
+        border-bottom: 1px solid #eee;
+    }
+    .container {
+        height: 150/16rem;
+        background: url("../images/sum.jpg") no-repeat left 19/16rem center;
+        background-size: 80/16rem 78/16rem;
+        border-bottom: 1px solid #eee;
+        overflow: hidden;
+        position: relative;
+        .left {
+            height: 150/16rem;
+            border-bottom: 1px solid #eee;
+            overflow: hidden;
+            float: left;
+            i{
+                font-style: normal;
+            }
+            .txt{
+                float: left;
+            }
+            .num,
+            .pay {
+                text-indent: 129/16rem;
+            }
+            .num {
+                font-size: 34/16rem;
+                margin: 30/16rem 0 16/16rem;
+                overflow: hidden;
+            }
+            .pay {
+                font-size: 28/16rem;
+                color: #666;
+            }
+        }
+        .right {
+            @height: 150/16rem;
+            height: @height;
+            line-height: @height;
+            font-size: 22/16rem;
+            color: #bdbdbd;
+            margin-right: 50/16rem;
+            float: right;
+        }
+        .arrow {
+            width: 17/16rem;
+            height: 31/16rem;
+            position: absolute;
+            right: 17/16rem;
+            top: 60/16rem;
+        }
+        .tui{
+            width: 70/16rem;
+            height: 36/16rem;
+            margin-left: 15/16rem;
+            float: left;
+        }
+    }
+    .xiaBi {
+        background: url("../images/sum.jpg") no-repeat left 19/16rem center;
+        background-size: 80/16rem 78/16rem;
+        .left .pay {
+            color: #ed2027;
+        }
+    }
+    .yue{
+        background: url("../images/yue.jpg") no-repeat left 19/16rem center;
+        background-size: 63/16rem 60/16rem;
+    }
+    .wx{
+        background: url("../images/wx.jpg") no-repeat left 19/16rem center;
+        background-size: 74/16rem 61/16rem;
+    }
+    .zfb{
+        background: url("../images/zfb.jpg") no-repeat left 19/16rem center;
+        background-size: 64/16rem 64/16rem;
+    }
+}
+.error-msg{
+    @height: 50/16rem;
+    height: @height;
+    line-height: @height;
+    font-size: 20/16rem;
+    text-align: center;
+    margin-bottom: 100/16rem;
+}

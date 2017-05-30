@@ -1,0 +1,258 @@
+body {
+  background-color: #f4f4f4;
+}
+.banner {
+  width: 100%;
+}
+.balance,
+.combo {
+  background-color: #fff;
+  margin-top: 1.0625rem;
+  overflow: hidden;
+}
+.balance > .title,
+.combo > .title {
+  border-bottom: 1px solid #efefef;
+}
+.balance > .title > .main,
+.combo > .title > .main {
+  width: 10.625rem;
+  height: 5rem;
+  line-height: 5rem;
+  font-size: 1.875rem;
+  text-indent: 2.625rem;
+  background: url("../images/balance.jpg") no-repeat left center;
+  background-size: 1.8125rem 2.1875rem;
+  margin: 0 auto;
+}
+.balance .main,
+.combo .main {
+  overflow: hidden;
+}
+.balance {
+  padding-bottom: 1.875rem;
+}
+.balance .con {
+  width: 50%;
+  position: relative;
+  float: left;
+}
+.balance .con .data,
+.balance .con .title,
+.balance .con .link {
+  text-align: center;
+}
+.balance .con .data {
+  font-size: 2.375rem;
+  color: #1baa5c;
+  margin-top: 2.1875rem;
+}
+.balance .con .title {
+  font-size: 1.625rem;
+  color: #999999;
+  margin: 1.875rem 0;
+}
+.balance .con .link {
+  height: 4.1875rem;
+  line-height: 4.1875rem;
+  color: #1cc86a;
+  font-size: 1.75rem;
+  border: 1px solid #1cc86a;
+  border-radius: 50px;
+  margin: 0 3.84375rem;
+  display: block;
+}
+.balance .con .free {
+  width: 8.625rem;
+  height: 2.0625rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.combo > .title > .main {
+  background: url("../images/combo.jpg") no-repeat left center;
+  background-size: 1.8125rem 2.1875rem;
+}
+.combo .con {
+  width: 50%;
+  border-bottom: 1px solid #eeeeee;
+  float: left;
+}
+.combo .con:nth-child(even) .link {
+  border-left: 1px solid #eeeeee;
+}
+.combo .link {
+  height: 5.25rem;
+  background: url("../images/combo-link.jpg") no-repeat left 1.3125rem center;
+  background-size: 5.25rem 5.25rem;
+  padding: 2.25rem 0;
+  display: block;
+  position: relative;
+}
+.combo .link .num,
+.combo .link .describe {
+  margin-left: 7.9375rem;
+}
+.combo .link .num {
+  color: #000;
+  font-size: 2.375rem;
+}
+.combo .link .describe {
+  color: #999;
+  font-size: 1.375rem;
+  margin-top: 1rem;
+}
+.combo .link .arrow {
+  width: 1.0625rem;
+  height: 1.8125rem;
+  position: absolute;
+  right: 1.625rem;
+  top: 4rem;
+}
+footer .footer {
+  width: 20rem;
+  height: 5.3125rem;
+  line-height: 5.3125rem;
+  font-size: 1.25rem;
+  text-indent: 4.4375rem;
+  margin: 0 auto;
+  background: url("../images/footer-icon.jpg") no-repeat left center;
+}
+.sum-payment {
+  background-color: #fff;
+  margin-top: 1.25rem;
+}
+.sum-payment .con {
+  height: 9.375rem;
+  background: url("../images/sum.jpg") no-repeat left 1.1875rem center;
+  background-size: 5rem 4.875rem;
+  border-bottom: 1px solid #eee;
+  overflow: hidden;
+}
+.sum-payment .con .num,
+.sum-payment .con .pay {
+  text-indent: 8.0625rem;
+}
+.sum-payment .con .num {
+  font-size: 2.125rem;
+  margin: 1.875rem 0 1rem;
+}
+.sum-payment .con .pay {
+  font-size: 1.75rem;
+  color: #999;
+}
+.sum-payment .con-a {
+  height: 6.5625rem;
+  overflow: hidden;
+  margin: 0 1.1875rem;
+}
+.sum-payment .con-a .txt {
+  line-height: 6.5625rem;
+  font-size: 1.75rem;
+  color: #666;
+  float: left;
+}
+.sum-payment .con-a .num {
+  float: right;
+}
+.sum-payment .con-a .num .num-a {
+  height: 3.375rem;
+  line-height: 3.375rem;
+  color: #ed2027;
+  font-size: 1.75rem;
+  margin-top: 0.8125rem;
+}
+.sum-payment .con-a .num .num-b {
+  font-size: 1.125rem;
+}
+.type-payment {
+  background-color: #fff;
+  margin-top: 1.25rem;
+}
+.type-payment .title {
+  height: 5rem;
+  line-height: 5rem;
+  font-size: 1.625rem;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+.type-payment .container {
+  height: 9.375rem;
+  background: url("../images/sum.jpg") no-repeat left 1.1875rem center;
+  background-size: 5rem 4.875rem;
+  border-bottom: 1px solid #eee;
+  overflow: hidden;
+  position: relative;
+}
+.type-payment .container .left {
+  height: 9.375rem;
+  border-bottom: 1px solid #eee;
+  overflow: hidden;
+  float: left;
+}
+.type-payment .container .left i {
+  font-style: normal;
+}
+.type-payment .container .left .txt {
+  float: left;
+}
+.type-payment .container .left .num,
+.type-payment .container .left .pay {
+  text-indent: 8.0625rem;
+}
+.type-payment .container .left .num {
+  font-size: 2.125rem;
+  margin: 1.875rem 0 1rem;
+  overflow: hidden;
+}
+.type-payment .container .left .pay {
+  font-size: 1.75rem;
+  color: #666;
+}
+.type-payment .container .right {
+  height: 9.375rem;
+  line-height: 9.375rem;
+  font-size: 1.375rem;
+  color: #bdbdbd;
+  margin-right: 3.125rem;
+  float: right;
+}
+.type-payment .container .arrow {
+  width: 1.0625rem;
+  height: 1.9375rem;
+  position: absolute;
+  right: 1.0625rem;
+  top: 3.75rem;
+}
+.type-payment .container .tui {
+  width: 4.375rem;
+  height: 2.25rem;
+  margin-left: 0.9375rem;
+  float: left;
+}
+.type-payment .xiaBi {
+  background: url("../images/sum.jpg") no-repeat left 1.1875rem center;
+  background-size: 5rem 4.875rem;
+}
+.type-payment .xiaBi .left .pay {
+  color: #ed2027;
+}
+.type-payment .yue {
+  background: url("../images/yue.jpg") no-repeat left 1.1875rem center;
+  background-size: 3.9375rem 3.75rem;
+}
+.type-payment .wx {
+  background: url("../images/wx.jpg") no-repeat left 1.1875rem center;
+  background-size: 4.625rem 3.8125rem;
+}
+.type-payment .zfb {
+  background: url("../images/zfb.jpg") no-repeat left 1.1875rem center;
+  background-size: 4rem 4rem;
+}
+.error-msg {
+  height: 3.125rem;
+  line-height: 3.125rem;
+  font-size: 1.25rem;
+  text-align: center;
+  margin-bottom: 6.25rem;
+}
