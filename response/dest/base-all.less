@@ -6,6 +6,8 @@ body {
     width: 100%;
 }
 
+.container {}
+
 .balance,
 .combo {
     background-color: #fff;
@@ -53,17 +55,18 @@ body {
             margin: 30/16rem 0;
         }
         .link {
+            width: 70%;
             @height: 67/16rem;
             height: @height;
             line-height: @height;
             color: #1cc86a;
             font-size: 28/16rem;
             border: 1px solid #1cc86a;
-            border-radius: 50px; 
-            margin: 0 (375-252)/2/16rem;
+            border-radius: 50px;
+            margin: 0 auto;
             display: block;
         }
-        .free{
+        .free {
             width: 138/16rem;
             height: 33/16rem;
             position: absolute;
@@ -121,17 +124,15 @@ body {
 }
 
 // 底部
-footer {
-    .footer {
-        width: 320/16rem;
-        @height: 85/16rem;
-        height: @height;
-        line-height: @height;
-        font-size: 20/16rem;
-        text-indent: 71/16rem;
-        margin: 0 auto;
-        background: url("../images/footer-icon.jpg") no-repeat left center;
-    }
+.footer {
+    width: 320/16rem;
+    @height: 85/16rem;
+    height: @height;
+    line-height: @height;
+    font-size: 20/16rem;
+    text-indent: 71/16rem;
+    margin: 0 auto;
+    background: url("../images/footer-icon.jpg") no-repeat left center;
 }
 
 // 付款
@@ -169,6 +170,7 @@ footer {
             float: left;
         }
         .num {
+            text-align: right;
             float: right;
             .num-a {
                 @height: 54/16rem;
@@ -197,9 +199,6 @@ footer {
         border-bottom: 1px solid #eee;
     }
     .container {
-        height: 150/16rem;
-        background: url("../images/sum.jpg") no-repeat left 19/16rem center;
-        background-size: 80/16rem 78/16rem;
         border-bottom: 1px solid #eee;
         overflow: hidden;
         position: relative;
@@ -208,10 +207,10 @@ footer {
             border-bottom: 1px solid #eee;
             overflow: hidden;
             float: left;
-            i{
+            i {
                 font-style: normal;
             }
-            .txt{
+            .txt {
                 float: left;
             }
             .num,
@@ -244,7 +243,7 @@ footer {
             right: 17/16rem;
             top: 60/16rem;
         }
-        .tui{
+        .tui {
             width: 70/16rem;
             height: 36/16rem;
             margin-left: 15/16rem;
@@ -258,24 +257,872 @@ footer {
             color: #ed2027;
         }
     }
-    .yue{
+    .yue {
         background: url("../images/yue.jpg") no-repeat left 19/16rem center;
         background-size: 63/16rem 60/16rem;
     }
-    .wx{
+    .wx {
         background: url("../images/wx.jpg") no-repeat left 19/16rem center;
         background-size: 74/16rem 61/16rem;
     }
-    .zfb{
+    .zfb {
         background: url("../images/zfb.jpg") no-repeat left 19/16rem center;
         background-size: 64/16rem 64/16rem;
     }
 }
-.error-msg{
+
+.error-msg {
     @height: 50/16rem;
     height: @height;
     line-height: @height;
     font-size: 20/16rem;
     text-align: center;
     margin-bottom: 100/16rem;
+}
+
+@media screen and (max-width: 660px) {
+    .balance,
+    .combo {
+        &>.title>.main {
+            width: 170/16rem;
+            @height: 80/16rem;
+            height: @height;
+            line-height: @height;
+            font-size: 28/16rem;
+            text-indent: 42/16rem;
+        }
+    } // 余额
+    .balance {
+        .con {
+            .data {
+                font-size: 34/16rem;
+                margin-top: 35/16rem;
+            }
+            .title {
+                font-size: 22/16rem;
+                margin: 24/16rem 0;
+            }
+            .link {
+                width: 60%;
+                @height: 50/16rem;
+                height: @height;
+                line-height: @height;
+                font-size: 22/16rem;
+            }
+            .free {
+                width: 138/16rem;
+                height: 33/16rem;
+            }
+        }
+    } // 套餐
+    .combo {
+        .link {
+            height: 70/16rem;
+            background-size: 84/16rem 84/16rem;
+            padding: 36/16rem 0;
+            background: url("../images/combo-link.jpg") no-repeat left 21/16rem center;
+            background-size: 70/16rem 70/16rem;
+            .num,
+            .describe {
+                margin-left: 110/16rem;
+            }
+            .num {
+                font-size: 34/16rem;
+            }
+            .describe {
+                font-size: 18/16rem;
+                margin-top: 16/16rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .balance,
+    .combo {
+        &>.title>.main {
+            width: 150/16rem;
+            @height: 70/16rem;
+            height: @height;
+            line-height: @height;
+            font-size: 24/16rem;
+            text-indent: 42/16rem;
+        }
+    } // 余额
+    .balance {
+        .con {
+            .data {
+                font-size: 30/16rem;
+                margin-top: 35/16rem;
+            }
+            .title {
+                font-size: 18/16rem;
+                margin: 20/16rem 0;
+            }
+            .link {
+                width: 50%;
+                @height: 45/16rem;
+                height: @height;
+                line-height: @height;
+                font-size: 18/16rem; // margin: 0 (375-220)/2/16rem;
+            }
+            .free {
+                width: 120/16rem;
+                height: auto;
+            }
+        }
+    } // 套餐
+    .combo {
+        .link {
+            height: 60/16rem;
+            background-size: 84/16rem 84/16rem;
+            padding: 20/16rem 0;
+            background: url("../images/combo-link.jpg") no-repeat left 21/16rem center;
+            background-size: 60/16rem 60/16rem;
+            .num {
+                font-size: 28/16rem;
+            }
+            .describe {
+                font-size: 16/16rem;
+                margin-top: 12/16rem;
+            }
+            .num,
+            .describe {
+                margin-left: 100/16rem;
+            }
+            .arrow {
+                width: 15/16rem;
+                height: 27/16rem;
+                position: absolute;
+                right: 26/16rem;
+                top: 50%;
+                margin-top: -27/16/2rem
+            }
+        }
+    }
+    .footer {
+        width: 290/16rem;
+        text-indent: 60/16rem;
+        background: url("../images/footer-icon.jpg") no-repeat left center;
+        background-size: 46/16rem 37/16rem;
+        a {
+            font-size: 18/16rem;
+        }
+    } // 付款
+    .sum-payment {
+        margin-top: 15/16rem;
+        .con {
+            height: 120/16rem;
+            background: url("../images/sum.jpg") no-repeat left 15/16rem center;
+            background-size: 64/16rem 63/16rem;
+            .num,
+            .pay {
+                text-indent: 105/16rem;
+            }
+            .num {
+                font-size: 28/16rem;
+                margin: 29/16rem 0 13/16rem;
+            }
+            .pay {
+                font-size: 22/16rem;
+            }
+        }
+        .con-a {
+            @height: 84/16rem;
+            height: @height;
+            margin: 0 15/16rem;
+            .txt {
+                line-height: @height;
+                font-size: 23/16rem;
+            }
+            .num {
+                .num-a {
+                    @height: 32/16rem;
+                    height: @height;
+                    line-height: @height;
+                    font-size: 23/16rem;
+                    margin-top: 14/16rem;
+                }
+                .num-b {
+                    font-size: 14/16rem;
+                }
+            }
+        }
+    }
+    .type-payment {
+        margin-top: 15/16rem;
+        .title {
+            @height: 64/16rem;
+            height: @height;
+            line-height: @height;
+            font-size: 22/16rem;
+        }
+        .container {
+            overflow: hidden;
+            .left {
+                height: 120/16rem;
+                border-bottom: 1px solid #eee;
+                .num,
+                .pay {
+                    text-indent: 104/16rem;
+                }
+                .num {
+                    font-size: 25/16rem;
+                    margin: 25/16rem 0 14/16rem;
+                }
+                .pay {
+                    font-size: 21/16rem;
+                }
+            }
+            .right {
+                @height: 120/16rem;
+                height: @height;
+                line-height: @height;
+                font-size: 20/16rem;
+                margin-right: 40/16rem;
+            }
+            .arrow {
+                width: 12/16rem;
+                height: 26/16rem;
+                position: absolute;
+                right: 11/16rem;
+                top: 50%;
+                margin-top: -26/2/16rem
+            }
+            .tui {
+                width: 58/16rem;
+                height: 28/16rem;
+                margin-left: 12/16rem;
+            }
+        }
+        .xiaBi {
+            background: url("../images/sum.jpg") no-repeat left 15/16rem center;
+            background-size: 54/16rem 53/16rem;
+        }
+        .yue {
+            background: url("../images/yue.jpg") no-repeat left 15/16rem center;
+            background-size: 51/16rem 49/16rem;
+        }
+        .wx {
+            background: url("../images/wx.jpg") no-repeat left 15/16rem center;
+            background-size: 60/16rem 49/16rem;
+        }
+        .zfb {
+            background: url("../images/zfb.jpg") no-repeat left 15/16rem center;
+            background-size: 52/16rem 52/16rem;
+        }
+    }
+    .error-msg {
+        font-size: 20/16rem;
+        margin-bottom: 80/16rem;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .balance,
+    .combo {
+        &>.title>.main {
+            width: 138/16rem;
+            @height: 60/16rem;
+            height: @height;
+            line-height: @height;
+            font-size: 24/16rem;
+            text-indent: 38/16rem;
+            background: url("../images/balance.jpg") no-repeat left center;
+            background-size: 22/16rem 27/16rem;
+        }
+    } // 余额
+    .balance {
+        .con {
+            .data {
+                font-size: 24/16rem;
+                margin-top: 35/16rem;
+            }
+            .title {
+                font-size: 18/16rem;
+                margin: 14/16rem 0;
+            }
+            .link {
+                width: 50%;
+                @height: 38/16rem;
+                height: @height;
+                line-height: @height;
+                font-size: 18/16rem;
+            }
+            .free {
+                width: 100/16rem;
+                height: auto;
+            }
+        }
+    }
+    .combo>.title>.main {
+        background: url("../images/combo.jpg") no-repeat left center;
+        background-size: 22/16rem 27/16rem;
+    } // 套餐
+    .combo {
+        .link {
+            height: 50/16rem;
+            padding: 20/16rem 0;
+            background: url("../images/combo-link.jpg") no-repeat left 21/16rem center;
+            background-size: 50/16rem 50/16rem;
+            .num {
+                font-size: 24/16rem;
+            }
+            .describe {
+                font-size: 14/16rem;
+                margin-top: 10/16rem;
+            }
+            .num,
+            .describe {
+                margin-left: 90/16rem;
+            }
+            .arrow {
+                width: 15/16rem;
+                height: 27/16rem;
+                position: absolute;
+                right: 22/16rem;
+                top: 50%;
+                margin-top: -27/16/2rem
+            }
+        }
+    } // 付款
+    .sum-payment {
+        margin-top: 9/16rem;
+        .con {
+            height: 94/16rem;
+            background: url("../images/sum.jpg") no-repeat left 12/16rem center;
+            background-size: 50/16rem 49/16rem;
+            .num,
+            .pay {
+                text-indent: 82/16rem;
+            }
+            .num {
+                font-size: 22/16rem;
+                margin: 22/16rem 0 10/16rem;
+            }
+            .pay {
+                font-size: 18/16rem;
+            }
+        }
+        .con-a {
+            @height: 65/16rem;
+            height: @height;
+            margin: 0 12/16rem;
+            .txt {
+                line-height: @height;
+                font-size: 18/16rem;
+            }
+            .num {
+                .num-a {
+                    @height: 24/16rem;
+                    height: @height;
+                    line-height: @height;
+                    font-size: 18/16rem;
+                    margin-top: 14/16rem;
+                }
+                .num-b {
+                    font-size: 12/16rem;
+                }
+            }
+        }
+    }
+    .type-payment {
+        margin-top: 9/16rem;
+        .title {
+            @height: 50/16rem;
+            height: @height;
+            line-height: @height;
+            font-size: 18/16rem;
+        }
+        .container {
+            overflow: hidden;
+            .left {
+                height: 93/16rem;
+                border-bottom: 1px solid #eee;
+                .num,
+                .pay {
+                    text-indent: 65/16rem;
+                }
+                .num {
+                    font-size: 20/16rem;
+                    margin: 19/16rem 0 10/16rem;
+                }
+                .pay {
+                    font-size: 17/16rem;
+                }
+            }
+            .right {
+                @height: 93/16rem;
+                height: @height;
+                line-height: @height;
+                font-size: 14/16rem;
+                margin-right: 31/16rem;
+            }
+            .arrow {
+                width: 10/16rem;
+                height: 19/16rem;
+                position: absolute;
+                right: 11/16rem;
+                top: 50%;
+                margin-top: -16/2/16rem
+            }
+            .tui {
+                width: 36/16rem;
+                height: 19/16rem;
+                margin-left: 10/16rem;
+            }
+        }
+        .xiaBi {
+            background: url("../images/sum.jpg") no-repeat left 12/16rem center;
+            background-size: 42/16rem 42/16rem;
+        }
+        .yue {
+            background: url("../images/yue.jpg") no-repeat left 12/16rem center;
+            background-size: 40/16rem 38/16rem;
+        }
+        .wx {
+            background: url("../images/wx.jpg") no-repeat left 12/16rem center;
+            background-size: 46/16rem 38/16rem;
+        }
+        .zfb {
+            background: url("../images/zfb.jpg") no-repeat left 12/16rem center;
+            background-size: 40/16rem 40/16rem;
+        }
+    }
+    .error-msg {
+        font-size: 16/16rem;
+        margin-bottom: 50/16rem;
+    }
+}
+
+// @media screen and (max-width: 470px) {
+//     .balance,
+//     .combo {
+//         &>.title>.main {
+//             width: 138/16rem;
+//             @height: 60/16rem;
+//             height: @height;
+//             line-height: @height;
+//             font-size: 24/16rem;
+//             text-indent: 38/16rem;
+//             background: url("../images/balance.jpg") no-repeat left center;
+//             background-size: 22/16rem 27/16rem;
+//         }
+//     } // 余额
+//     .balance {
+//         .con {
+//             .data {
+//                 font-size: 22/16rem;
+//                 margin-top: 35/16rem;
+//             }
+//             .title {
+//                 font-size: 16/16rem;
+//                 margin: 14/16rem 0;
+//             }
+//             .link {
+//                 width: 50%;
+//                 @height: 32/16rem;
+//                 height: @height;
+//                 line-height: @height;
+//                 font-size: 16/16rem;
+//             }
+//             .free {
+//                 width: 100/16rem;
+//                 height: auto;
+//             }
+//         }
+//     }
+//     .combo>.title>.main {
+//         background: url("../images/combo.jpg") no-repeat left center;
+//         background-size: 22/16rem 27/16rem;
+//     } // 套餐
+//     .combo {
+//         .link {
+//             height: 45/16rem;
+//             padding: 20/16rem 0;
+//             background: url("../images/combo-link.jpg") no-repeat left 21/16rem center;
+//             background-size: 45/16rem 45/16rem;
+//             .num {
+//                 font-size: 20/16rem;
+//             }
+//             .describe {
+//                 font-size: 14/16rem;
+//                 margin-top: 10/16rem;
+//             }
+//             .num,
+//             .describe {
+//                 margin-left: 80/16rem;
+//             }
+//             .arrow {
+//                 width: 12/16rem;
+//                 height: 21/16rem;
+//                 position: absolute;
+//                 right: 12/16rem;
+//                 top: 50%;
+//                 margin-top: -21/16/2rem
+//             }
+//         }
+//     }
+// }
+@media screen and (max-width: 470px) {
+    .balance,
+    .combo {
+        &>.title>.main {
+            width: 138/16rem;
+            @height: 54/16rem;
+            height: @height;
+            line-height: @height;
+            font-size: 24/16rem;
+            text-indent: 38/16rem;
+            background: url("../images/balance.jpg") no-repeat left center;
+            background-size: 22/16rem 27/16rem;
+        }
+    } // 余额
+    .balance {
+        .con {
+            .data {
+                font-size: 22/16rem;
+                margin-top: 35/16rem;
+            }
+            .title {
+                font-size: 16/16rem;
+                margin: 14/16rem 0;
+            }
+            .link {
+                width: 50%;
+                @height: 32/16rem;
+                height: @height;
+                line-height: @height;
+                font-size: 16/16rem;
+            }
+            .free {
+                width: 100/16rem;
+                height: auto;
+            }
+        }
+    }
+    .combo>.title>.main {
+        background: url("../images/combo.jpg") no-repeat left center;
+        background-size: 22/16rem 27/16rem;
+    } // 套餐
+    .combo {
+        .link {
+            height: 40/16rem;
+            padding: 18/16rem 0;
+            background: url("../images/combo-link.jpg") no-repeat left 14/16rem center;
+            background-size: 40/16rem 40/16rem;
+            .num {
+                font-size: 20/16rem;
+            }
+            .describe {
+                font-size: 14/16rem;
+                margin-top: 8/16rem;
+            }
+            .num,
+            .describe {
+                margin-left: 64/16rem;
+            }
+            .arrow {
+                width: 12/16rem;
+                height: 21/16rem;
+                position: absolute;
+                right: 12/16rem;
+                top: 50%;
+                margin-top: -21/16/2rem
+            }
+        }
+    } // 付款
+    .sum-payment {
+        margin-top: 16/16rem;
+        .con {
+            height: 65/16rem;
+            background: url("../images/sum.jpg") no-repeat left 9/16rem center;
+            background-size: 40/16rem 41/16rem;
+            .num,
+            .pay {
+                text-indent: 66/16rem;
+            }
+            .num {
+                font-size: 18/16rem;
+                margin: 12/16rem 0 6/16rem;
+            }
+            .pay {
+                font-size: 13/16rem;
+            }
+        }
+        .con-a {
+            @height: 45/16rem;
+            height: @height;
+            margin: 0 19/16rem;
+            .txt {
+                line-height: @height;
+                font-size: 15/16rem;
+            }
+            .num {
+                .num-a {
+                    @height: 18/16rem;
+                    height: @height;
+                    line-height: @height;
+                    font-size: 16/16rem;
+                    margin-top: 6/16rem;
+                }
+                .num-b {
+                    font-size: 12/16rem;
+                }
+            }
+        }
+    }
+    .type-payment {
+        margin-top: 16/16rem;
+        .title {
+            @height: 40/16rem;
+            height: @height;
+            line-height: @height;
+            font-size: 13/16rem;
+        }
+        .container {
+            overflow: hidden;
+            .left {
+                height: 75/16rem;
+                border-bottom: 1px solid #eee;
+                .num,
+                .pay {
+                    text-indent: 65/16rem;
+                }
+                .num {
+                    font-size: 16/16rem;
+                    margin: 19/16rem 0 9/16rem;
+                }
+                .pay {
+                    font-size: 13/16rem;
+                }
+            }
+            .right {
+                @height: 75/16rem;
+                height: @height;
+                line-height: @height;
+                font-size: 12/16rem;
+                margin-right: 25/16rem;
+            }
+            .arrow {
+                width: 9/16rem;
+                height: 16/16rem;
+                position: absolute;
+                right: 8/16rem;
+                top: 50%;
+                margin-top: -16/2/16rem
+            }
+            .tui {
+                width: 36/16rem;
+                height: 19/16rem;
+                margin-left: 8/16rem;
+            }
+        }
+        .xiaBi {
+            background: url("../images/sum.jpg") no-repeat left 9/16rem center;
+            background-size: 35/16rem 34/16rem;
+        }
+        .yue {
+            background: url("../images/yue.jpg") no-repeat left 9/16rem center;
+            background-size: 32/16rem 31/16rem;
+        }
+        .wx {
+            background: url("../images/wx.jpg") no-repeat left 9/16rem center;
+            background-size: 38/16rem 31/16rem;
+        }
+        .zfb {
+            background: url("../images/zfb.jpg") no-repeat left 9/16rem center;
+            background-size: 33/16rem 33/16rem;
+        }
+    }
+    .error-msg {
+        font-size: 14/16rem;
+        margin-bottom: 50/16rem;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .balance,
+    .combo {
+        &>.title>.main {
+            width: 110/16rem;
+            @height: 54/16rem;
+            height: @height;
+            line-height: @height;
+            font-size: 20/16rem;
+            text-indent: 28/16rem;
+            background: url("../images/balance.jpg") no-repeat left center;
+            background-size: 18/16rem 22/16rem;
+        }
+    } // 余额
+    .balance {
+        .con {
+            .data {
+                font-size: 22/16rem;
+                margin-top: 35/16rem;
+            }
+            .title {
+                font-size: 16/16rem;
+                margin: 14/16rem 0;
+            }
+            .link {
+                width: 50%;
+                @height: 32/16rem;
+                height: @height;
+                line-height: @height;
+                font-size: 16/16rem;
+            }
+            .free {
+                width: 80/16rem;
+                height: auto;
+            }
+        }
+    }
+    .combo>.title>.main {
+        background: url("../images/combo.jpg") no-repeat left center;
+        background-size: 18/16rem 22/16rem;
+    } // 套餐
+    .combo {
+        .link {
+            height: 36/16rem;
+            padding: 16/16rem 0;
+            background: url("../images/combo-link.jpg") no-repeat left 12/16rem center;
+            background-size: 36/16rem 36/16rem;
+            .num {
+                font-size: 18/16rem;
+            }
+            .describe {
+                font-size: 12/16rem;
+                margin-top: 8/16rem;
+            }
+            .num,
+            .describe {
+                margin-left: 58/16rem;
+            }
+            .arrow {
+                width: 8/16rem;
+                height: 14/16rem;
+                position: absolute;
+                right: 6/16rem;
+                top: 50%;
+                margin-top: -14/16/2rem
+            }
+        }
+    }
+    .footer {
+        width: 240/16rem;
+        text-indent: 50/16rem;
+        background: url("../images/footer-icon.jpg") no-repeat left center;
+        background-size: 40/16rem 32/16rem;
+        a {
+            font-size: 16/16rem;
+        }
+    } // 付款
+    .sum-payment {
+        margin-top: 20/16rem;
+        .con {
+            height: 65/16rem;
+            background: url("../images/sum.jpg") no-repeat left 8/16rem center;
+            background-size: 34/16rem 33/16rem;
+            .num,
+            .pay {
+                text-indent: 55/16rem;
+            }
+            .num {
+                font-size: 15/16rem;
+                margin: 16/16rem 0 8/16rem;
+            }
+            .pay {
+                font-size: 12/16rem;
+            }
+        }
+        .con-a {
+            @height: 45/16rem;
+            height: @height;
+            margin: 0 19/16rem;
+            .txt {
+                line-height: @height;
+                font-size: 12/16rem;
+            }
+            .num {
+                .num-a {
+                    @height: 16/16rem;
+                    height: @height;
+                    line-height: @height;
+                    font-size: 14/16rem;
+                    margin-top: 8/16rem;
+                }
+                .num-b {
+                    font-size: 12/16rem;
+                }
+            }
+        }
+    }
+    .type-payment {
+        margin-top: 20/16rem;
+        .title {
+            @height: 34/16rem;
+            height: @height;
+            line-height: @height;
+            font-size: 12/16rem;
+        }
+        .container {
+            overflow: hidden;
+            .left {
+                height: 63/16rem;
+                border-bottom: 1px solid #eee;
+                .num,
+                .pay {
+                    text-indent: 55/16rem;
+                }
+                .num {
+                    font-size: 14/16rem;
+                    margin: 12/16rem 0 6/16rem;
+                }
+                .pay {
+                    font-size: 12/16rem;
+                }
+            }
+            .right {
+                @height: 63/16rem;
+                height: @height;
+                line-height: @height;
+                font-size: 12/16rem;
+                margin-right: 21/16rem;
+            }
+            .arrow {
+                width: 8/16rem;
+                height: 14/16rem;
+                position: absolute;
+                right: 7/16rem;
+                top: 50%;
+                margin-top: -14/2/16rem
+            }
+            .tui {
+                width: 30/16rem;
+                height: 17/16rem;
+                margin-left: 6/16rem;
+            }
+        }
+        .xiaBi {
+            background: url("../images/sum.jpg") no-repeat left 19/16rem center;
+            background-size: 29/16rem 28/16rem;
+        }
+        .yue {
+            background: url("../images/yue.jpg") no-repeat left 19/16rem center;
+            background-size: 28/16rem 27/16rem;
+        }
+        .wx {
+            background: url("../images/wx.jpg") no-repeat left 19/16rem center;
+            background-size: 32/16rem 26/16rem;
+        }
+        .zfb {
+            background: url("../images/zfb.jpg") no-repeat left 19/16rem center;
+            background-size: 28/16rem 28/16rem;
+        }
+    }
+    .error-msg {
+        font-size: 12/16rem;
+        margin-bottom: 50/16rem;
+    }
 }
